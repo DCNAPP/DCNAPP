@@ -6,11 +6,8 @@ import os
 import time
 import requests
 import json
+import gdown
 
-try:
-    import gdown
-except ImportError as e:
-    os.system('pip install gdown')
 
 print("""
 ======================================
