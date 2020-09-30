@@ -31,20 +31,23 @@ You can access the repo by visiting : https://github.com/Senpai-10/DCNAPP
 
 
 class update:
-
+    
     def clean(self):
         ...
 
 update = update()
 
+with open('https://senpai-10.github.io/DCNAPP/updater/.json') as f:
+    jsdata = json.load(f)
 
+version = jsdata['version']
 
-data = requests.get('https://github.com/Senpai-10/DCNAPP/blob/master/versions/2020.09.30/config.json')
+data = requests.get(f'https://senpai-10.github.io/DCNAPP/versions/{version}/config.json')
 jsondata = data.json()
-print(jsondata)
 
 
-# id = '1ukI1C4XGRHeCmCVwNoudv_4wG1JYTkgT'     # read from config file
-# url = 'https://drive.google.com/uc?id=' + id
-# output = 'spam.png'
-# gdown.download(url, output, quiet=False) 
+
+id = jsondata['google-drive'][0]['id']     # read from config file
+url = 'https://drive.google.com/uc?id=' + id
+output = jsondata['google-drive'][0]['output'] 
+gdown.download(url, output, quiet=False) 
