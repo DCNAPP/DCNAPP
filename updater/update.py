@@ -6,8 +6,10 @@ import os
 import time
 import requests
 import json
-import gdown
-
+try:
+    import gdown
+except ImportError:
+    os.system('pip install gdown')
 
 print("""
 ======================================
@@ -34,7 +36,7 @@ class update:
 
 update = update()
 
-with open('https://senpai-10.github.io/DCNAPP/updater/.json') as f:
+with open('https://senpai-10.github.io/DCNAPP/updater/ver.json') as f:
     jsdata = json.load(f)
 
 version = jsdata['version']
