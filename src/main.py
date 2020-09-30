@@ -11,8 +11,7 @@ eel.start('index.html', block=False)
 # check the network Connection
 # if false open html file display network error 
 def Connection_Test():
-    """Check The Network Connection
-    If False Open Html File Display Network Error"""
+    """Check The Network Connection"""
     try:
         socket.create_connection(('Google.com', 80))
         return True
@@ -20,6 +19,7 @@ def Connection_Test():
     except OSError:
         os.system('start no-connection.html')
         return False
+
 # call the Connection_Test function
 Connection_Test()
 
