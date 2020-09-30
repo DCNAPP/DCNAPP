@@ -37,10 +37,14 @@ class update:
 
 update = update()
 
-data = requests.get('')
-jsondata = data.json()
 
-id = '1ukI1C4XGRHeCmCVwNoudv_4wG1JYTkgT'     # read from config file
-url = 'https://drive.google.com/uc?id=' + id
-output = 'spam.png'
-gdown.download(url, output, quiet=False) 
+
+data = requests.get('https://github.com/Senpai-10/DCNAPP/blob/master/versions/2020.09.30/config.json')
+jsondata = data.json()
+print(jsondata)
+
+
+# id = '1ukI1C4XGRHeCmCVwNoudv_4wG1JYTkgT'     # read from config file
+# url = 'https://drive.google.com/uc?id=' + id
+# output = 'spam.png'
+# gdown.download(url, output, quiet=False) 
