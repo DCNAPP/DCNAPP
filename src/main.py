@@ -20,6 +20,7 @@ def Connection_Test():
         os.system('start no-connection.html')
         return False
 
+
 # call the Connection_Test function
 Connection_Test()
 
