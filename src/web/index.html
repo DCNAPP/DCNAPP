@@ -25,7 +25,16 @@
 
     <center>
         <div>
-            <div><iframe id="frame" width="1100" height="600" frameborder="0" src='blank_.html' allowfullscreen ><iframe></iframe></div>
+            <div>
+              <iframe id="frame" width="1100" height="600" frameborder="0" src='blank_.html' allowfullscreen ></iframe>
+            </div>
+            
+            <!-- <div>
+              <video width="1100" height="600" controls style="outline: None;">
+                <source id="frame" src="" type="video/mp4">
+              </video>
+            </div> -->
+
         </div>
         <br>
         <div class="dropdown">
@@ -34,28 +43,161 @@
               <span class="select">اختر الحلقة</span>
             </div>
             <div class="dropdown-list" style="display: None;">
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue(1)" value='https://mega.nz/embed/Th50WQ5Q#yKTVGui8_A0eDnHnwYdckJG4tfLrfPqSflF62DFt5bc'>  الحلقة 1</button></div>
-              <div class="dropdown-list__item"><button value="https://mega.nz/embed/e9pmVSLC#gGZDt5jjGJnGHUQvcZSSQsP6l-A_EUzTGzB4PVUlj3o"> الحلقة 2 </button></div>
-              <div class="dropdown-list__item">#</div>
-              <div class="dropdown-list__item">#</div>
-              <div class="dropdown-list__item">#</div>
-              <div class="dropdown-list__item">#</div>
-              <div class="dropdown-list__item">#</div>
-              <div class="dropdown-list__item">#</div>
-              <div class="dropdown-list__item">#</div>
-              <div class="dropdown-list__item">#</div>
-              <div class="dropdown-list__item">#</div>
-              <div class="dropdown-list__item">#</div>
-              <div class="dropdown-list__item">#</div>
-              <div class="dropdown-list__item">#</div>
-              <div class="dropdown-list__item">#</div>
-              <div class="dropdown-list__item">#</div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('1')"> الحلقة 1 </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('2')"> الحلقة 2 </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
+              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('?')"> الحلقة  </button></div>
             </div>
         </div>
+
         <br>
-        <div class="update">
+        
+        <!-- <div class="update">
           <a href="https://github.com/Senpai-10/DCNAPP/releases" ><button> تحديث</button></a>
-        </div>  
+        </div> -->
+        
     </center>
 
   <br>
@@ -73,25 +215,3 @@
 
 
 
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-    <title></title>
-    
-</head>
-<body>
-
-    <button id="text" value="https://mega.nz/embed/Th50WQ5Q#yKTVGui8_A0eDnHnwYdckJG4tfLrfPqSflF62DFt5bc"> video 1 </button>
-    <button id="text1" value="https://mega.nz/embed/e9pmVSLC#gGZDt5jjGJnGHUQvcZSSQsP6l-A_EUzTGzB4PVUlj3o"> video 2 </button>
-
-
-    <iframe id="frame" width="640" height="360" frameborder="0" src='blank_.html' allowfullscreen ><iframe>
-
-    
-
-    
-</body>
-</html>
--->
