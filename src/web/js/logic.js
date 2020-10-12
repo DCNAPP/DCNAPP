@@ -1,15 +1,29 @@
-// $(document).ready(function(){
-//     $("button").click(function() {
-//         $("#frame").attr("src", $(this).attr("value"));
-// })
-// });
-
 $(document).ready(function(){
     $("#list").click(function() {
         $(".dropdown-list").toggle();
     });
 });
 
+var version = "2020.1.0";
+
+
+$(document).ready(function(){
+    $.getJSON('https://senpai-10.github.io/DCNAPP/versions/version.json', function SetValue(data) {
+            
+
+        
+        if (version == data['last-version']) {
+
+            document.getElementById("update-button").style.backgroundColor = '#c5c5c5';
+            document.getElementById("update-button").style.cursor = 'not-allowed';
+            document.getElementById("update-a").href = 'none';
+        }
+        else {
+            document.getElementById("update-button").style.backgroundColor = 'rgb(37, 221, 77)';
+        }
+
+    });
+});
 
 function SetValue(n) {
     var word = $(".ep").text();
@@ -26,8 +40,5 @@ function SetValue(n) {
 
 
 function GetValue(n) {
-    // var word = document.getElementsByClassName('ep');
     SetValue(n);
-    
-    
 }
