@@ -80,7 +80,7 @@ button {
     
 }
 
-.update button{
+#update-button {
     width: 100px;
     height: 40px;
     border: none;
@@ -92,7 +92,7 @@ button {
     border-radius: 4px;
 }
 
-.update a{
+#update a{
     list-style: none;
     text-decoration: none;
 }
