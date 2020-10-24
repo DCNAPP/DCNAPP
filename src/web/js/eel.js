@@ -5,7 +5,7 @@ $(document).ready(function(){
     
 });
 
-var version = "2020.1.0";
+var version = "2020.1.1";
 
 
 $(document).ready(function(){
