@@ -5,26 +5,26 @@ $(document).ready(function(){
     
 });
 
-var version = "2020.1.1";
+var version = "v1.2";
 
 
-$(document).ready(function(){
-    $.getJSON('https://senpai-10.github.io/DCNAPP/versions/version.json', function SetValue(data) {
+// $(document).ready(function(){
+//     $.getJSON('https://senpai-10.github.io/DCNAPP/versions/version.json', function SetValue(data) {
             
 
         
-        if (version == data['last-version']) {
+//         if (version == data['latest-version']) {
 
-            document.getElementById("update-button").style.backgroundColor = '#c5c5c5';
-            document.getElementById("update-button").style.cursor = 'not-allowed';
-            document.getElementById("update-a").href = 'none';
-        }
-        else {
-            document.getElementById("update-button").style.backgroundColor = 'rgb(37, 221, 77)';
-        }
+//             document.getElementById("update-button").style.backgroundColor = '#c5c5c5';
+//             document.getElementById("update-button").style.cursor = 'not-allowed';
+//             document.getElementById("update-a").href = 'none';
+//         }
+//         else {
+//             document.getElementById("update-button").style.backgroundColor = 'rgb(37, 221, 77)';
+//         }
 
-    });
-});
+//     });
+// });
 
 function SetValue(n) {
     var word = $(".ep").text();
@@ -44,5 +44,20 @@ function SetValue(n) {
 
 function GetValue(n) {
     SetValue(n);
+        $.getJSON('https://senpai-10.github.io/DCNAPP/versions/version.json', function SetValue(data) {
+            
+
+        
+        if (version == data['latest-version']) {
+
+            console.log('you are in the latest version');
+
+        }
+        else {
+            alert('يوجد تحديث جديد لتحميل التحديث قم بتشغيل \nupdater.exe')
+            console.log('there\'s new update (open updater.exe)');
+        }
+
+    });
 }
 
