@@ -5,19 +5,43 @@ import time
 
 # access the web folder
 eel.init('web')
+
+
 # run the html file 
 # eel.start('index.html')
 eel.start('index.html', block=False)
 
-@eel.expose
-def exit_py():
-    '''
-    exit() is fixing:
-        after you close dcnapp the program is still running in the background
+
+# def getTasks(ProcessName):
+#     r = os.popen('tasklist /v').read().strip().split('\n')
+#     print('# of tasks is %s' % (len(r)))
+#     for i in range(len(r)):
+#         s = r[i]
+#         if ProcessName in r[i]:
+#             print('%s in r[i]' %(ProcessName))
+#             return r[i]
+#     return []
+
+# def CheckOpenWindow(ProcessName):
     
-    '''
-    exit()
+#     Name = ProcessName
+#     # notResponding = 'Not Responding'
+
+#     r = getTasks(Name)
+
+#     if not r:
+#         print('%s - No Such process' % (Name))
+#         exit()
+
+#     elif 'Not Responding' in r:
+#         print('%s is Not Responding' % (Name))
+
+#     else:
+#         print('%s is Running or Unknown' % (Name))
 
 
 while True:
+
     eel.sleep(10)
+
+    # CheckOpenWindow('DCNAPP')
