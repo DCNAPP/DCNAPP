@@ -5,7 +5,7 @@ $(document).ready(function(){
     
 });
 
-var version = "v1.2";
+var version = "v1.3";
 
 
 // $(document).ready(function(){
