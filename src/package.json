@@ -2,10 +2,28 @@
     "name": "dcnapp",
     "version": "1.4.0",
     "main": "main.js",
+    "author": "senpai-10",
+    "repository": "https://github.com/Senpai-10/DCNAPP",
     "devDependencies": {
-        "electron": "^10.1.5"
+        "electron": "^10.1.5",
+        "electron-builder": "^22.9.1"
     },
     "scripts": {
-        "start": "electron ."
+        "start": "electron .",
+        "build": "electron-builder"
+    },
+    "build": {
+        "appId": "com.senpai-10.dcnapp",
+        "directories": {
+            "buildResources": "UI/*"
+        },
+        "productName": "DCNAPP",
+        "win": {
+            "target": "portable",
+            "icon": "dc.ico"
+        },
+        "portable": {
+            "artifactName": "DCNAPP.exe"
+        }
     }
 }
