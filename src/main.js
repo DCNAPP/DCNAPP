@@ -5,18 +5,16 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const path = require("path");
 const url = require("url");
-const fs = require('fs');
+const write = require('write');
+
+write.sync('version.txt', version);
 
 let window;
 
 function createWindow() {
     window = new BrowserWindow();
     window.maximize();
-    // window.loadURL(url.format({
-    //     pathname: path.join(__dir, "index.html"),
-    //     protocol: 'file',
-    //     slashes: true
-    // }));
+    
     window.loadURL('file://' + __dirname + '/index.html')
 
     window.on("closed", () => {
@@ -26,10 +24,4 @@ function createWindow() {
 
 
 app.on('ready', createWindow);
-
-fs.writeFile('version.txt', version, (err) => {
-
-    if (err) throw err;
-
-});
 
