@@ -5,8 +5,156 @@
 
 body {
   background-color: #111010;
+
 }
 
+br {
+  -webkit-user-select: none;
+}
+
+#nav-main {
+  -webkit-user-select: none;
+  background-color: #0f0e0e;
+  height: 45px;
+  width: 100%;
+}
+
+#expand {
+  margin-top: 4px;
+  margin-right: 80px;
+  float: right;
+  background-color: #414141;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+#menu-body {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(675px, -473px);
+  z-index: 99;
+  background-color: rgb(39, 39, 39);
+  width: 250px;
+  height: 250px;
+
+}
+
+.elm-body-settings {
+  padding-top: 2%;
+  padding-bottom: 1%;
+  width: 90%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.elm-body-settings:hover {
+  transition: 0.2s linear;
+  background-color: rgb(49, 49, 49);
+  border-radius: 4px;
+}
+
+.elm-body-settings-theme {
+  padding-top: 2%;
+  padding-bottom: 1%;
+  width: 90%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.elm-body-settings-theme:hover {
+  transition: 0.2s linear;
+  background-color: rgb(49, 49, 49);
+  border-radius: 4px;
+}
+
+.elm-body-settings-theme-in-light {
+  padding-top: 2%;
+  padding-bottom: 1%;
+  width: 90%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.elm-body-settings-theme-in-light:hover {
+  transition: 0.2s linear;
+  background-color: rgb(49, 49, 49);
+  border-radius: 4px;
+}
+
+.elm-body-settings-theme-in-dark {
+  padding-top: 2%;
+  padding-bottom: 1%;
+  width: 90%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.elm-body-settings-theme-in-dark:hover {
+  transition: 0.2s linear;
+  background-color: rgb(49, 49, 49);
+  border-radius: 4px;
+}
+
+.elm-body-info {
+  padding-top: 2%;
+  padding-bottom: 1%;
+  width: 90%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.elm-body-info:hover {
+  transition: 0.2s linear;
+  background-color: rgb(49, 49, 49);
+  border-radius: 4px;
+}
+
+.elm-body-issue {
+  padding-top: 2%;
+  padding-bottom: 1%;
+  width: 90%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.elm-body-issue:hover {
+  transition: 0.2s linear;
+  background-color: rgb(49, 49, 49);
+  border-radius: 4px;
+}
+
+.elm-body-info-text {
+  color: #ffffff;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  width: 90%;
+  margin: 0 auto;
+  -webkit-user-select: text;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+.icon-span {
+  color: #ffffff;
+  position: relative;
+  bottom: 11px;
+  left: 20px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  
+}
+
+.chevron_right-icon {
+  float: right;
+}
+
+.icon {
+  width: 35px;
+  height: auto;
+  margin-top: auto;
+  margin-left: 15px;
+  
+}
 
 
 .dropdown {
