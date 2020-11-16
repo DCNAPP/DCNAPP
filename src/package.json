@@ -6,7 +6,8 @@
     "repository": "https://github.com/Senpai-10/DCNAPP",
     "devDependencies": {
         "electron": "^10.1.5",
-        "electron-builder": "^22.9.1"
+        "electron-builder": "^22.9.1",
+        "write": "^2.0.0"
     },
     "scripts": {
         "start": "electron .",
