@@ -53,7 +53,7 @@ def main():
     if not os.path.isfile('DCNAPP.exe'):
         print(f'\33[93m* You need to keep the updater with DCNAPP.exe at the same folder \33[0m\n')
         console('pause')
-        exit()
+        
 
     Loading.Search()
 
