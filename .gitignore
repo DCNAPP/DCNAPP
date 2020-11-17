@@ -1,4 +1,4 @@
 src/node_modules
 src/version.txt
-src/package-lock.json
+src\package-lock.json
 .todo
