@@ -7,7 +7,8 @@ const path = require("path");
 const url = require("url");
 const write = require('write');
 
-write.sync('version.txt', version);
+
+// write.sync('version.txt', version);
 
 let window;
 
@@ -24,4 +25,3 @@ function createWindow() {
 
 
 app.on('ready', createWindow);
-
