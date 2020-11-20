@@ -1,4 +1,4 @@
-let version = 'v1.4.0';
+let version = 'v1.4.1';
 
 const electron = require("electron");
 const app = electron.app;
@@ -15,6 +15,7 @@ let window;
 function createWindow() {
     window = new BrowserWindow();
     window.maximize();
+    window.setMenu(null);
     
     window.loadURL('file://' + __dirname + '/index.html')
 
