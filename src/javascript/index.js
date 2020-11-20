@@ -1,15 +1,16 @@
-var version = "v1.4.0";
+var version = "v1.4.1";
 
 
 $(document).ready(function(){
     $("#list").click(function() {
-        $(".dropdown-list").toggle();
+        $(".dropdown-list").toggle('fast');
     });
     
     $(".ep").click(function() {
-        $(".dropdown-list").hide();
+        $(".dropdown-list").hide('fast');
     });
 });
+
 
 
 
