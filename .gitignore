@@ -2,3 +2,4 @@ src/node_modules
 src/version.txt
 src/package-lock.json
 .todo
+tools/updater/__pycache__/
