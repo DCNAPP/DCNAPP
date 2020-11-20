@@ -14,6 +14,7 @@
     <script src="javascript/jquery-3.5.1.min.js"></script>
     <script src="javascript/index.js"></script>
     <script src="javascript/menu.js"></script>
+    <script src="javascript/theme.js"></script>
     <title>DCNAPP</title>
 </head>
 <body>
@@ -26,50 +27,41 @@
 
         <!-- settings -->
 
-        <div class="elm-body-settings">
+        <div class="elm-body" id="elm-body-settings">
           <img class="icon" src="asset/settings.svg"><span class="icon-span">Settings</span>
           <img class="chevron_right-icon" src="asset/chevron_right.svg">
         </div>
 
         
         <div id="settings-inside" style="display: none;">
-          <div class="elm-body-settings-theme">
+          <div class="elm-body" id="elm-body-settings-theme">
             <img class="icon" src="asset/theme.svg"><span class="icon-span">Theme</span>
             <img class="chevron_right-icon" src="asset/chevron_right.svg">
           </div>
         </div>
 
         <div id="settings-inside-theme" style="display: none;">
-          <div class="elm-body-settings-theme-in-light">
+          <div class="elm-body" id="elm-body-settings-theme-in-light">
             <img class="icon" src="asset/sun.svg"><span class="icon-span">Light</span>
             <!-- <img class="chevron_right-icon" src="asset/chevron_right.svg"> -->
           </div>
           <br>
-          <div class="elm-body-settings-theme-in-dark">
+          <div class="elm-body" id="elm-body-settings-theme-in-dark">
             <img class="icon" src="asset/moon.svg"><span class="icon-span">Dark</span>
             <!-- <img class="chevron_right-icon" src="asset/chevron_right.svg"> -->
           </div>
         </div>
         <br>
 
-        <!-- issue report -->
-
-        <div class="elm-body-issue">
-          <img class="icon" src="asset/bug_report.svg"><span class="icon-span">Bug report</span>
-          <img class="chevron_right-icon" src="asset/chevron_right.svg">
-        </div>
-
-        <br>
-
         <!-- info -->
 
-        <div class="elm-body-info">
+        <div class="elm-body" id="elm-body-info">
           <img class="icon" src="asset/info.svg"><span class="icon-span">Info</span>
           <img class="chevron_right-icon" src="asset/chevron_right.svg">
         </div>
 
         <div id="info-inside" style="display: none;">
-          <div class="elm-body-info-text">
+          <div id="info-text">
             <p>Creator: snepai-10</p>
             <br>
             <p id="version"></p>
@@ -84,13 +76,13 @@
     <br>
     <br>
 
-  
+    
 
 
     <center>
 
         <div>
-          <iframe id="frame" width="1100" height="600" frameborder="0" src='blank_.html' allowfullscreen ></iframe>
+          <iframe class="box" id="frame" width="1100" height="600" frameborder="0" src='' allowfullscreen ></iframe>
         </div>
         
 
@@ -100,6 +92,7 @@
           <h1 id="ep-title"></h1>
         </div>
         <br>
+
 
         <div class="dropdown">
             <div class="dropdown-select" id="list">
