@@ -68,7 +68,7 @@ def main():
 
     print(f'latest version of DCNAPP = {LatestVersion}\n')
 
-    print('Your DCNAPP version = ' + ReadVersion())
+    # print('Your DCNAPP version = ' + ReadVersion())
 
     print('\n')
 
