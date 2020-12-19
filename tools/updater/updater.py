@@ -1,7 +1,15 @@
 import os
 import requests
-from classs.loading import Loading
+import time
+import random
 
+def loading(msg):
+    dot = "."
+    for i in range(random.randint(3, 5)):
+        print(msg, end="")
+        print(dot, end="\r")
+        time.sleep(0.233)
+        dot += "."
 
 def console(msg): os.system(msg)
 
@@ -55,7 +63,7 @@ def main():
         console('pause')
         
 
-    Loading.Search()
+    loading("Checking for updates")
 
     if ReadVersion() == ReadJson('latest-version'):
         print('\nThere is no new update ):\n')
@@ -82,7 +90,7 @@ def main():
             print('\n')
 
             delete('DCNAPP.exe')
-            Loading.download()
+            loading("Downloading")
             download('DCNAPP.exe')
 
     print('\n')
