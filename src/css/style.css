@@ -19,6 +19,26 @@ br {
   -webkit-user-select: none;
 }
 
+#updater-dl {
+  background-color: rgb(71, 209, 89);
+  border: solid rgb(60, 196, 78) 1px;
+  border-radius: 20px;
+  padding: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+#updater-dl a {
+  color: white;
+  text-decoration: none;
+}
+
+#updater-dl:hover {
+  transition: 0.2s linear;
+  background-color: rgb(55, 187, 72);
+  border: solid rgb(60, 196, 78) 1px;
+}
+
 .box {
   background-color: var(--box-color);
   width: 1100px;
