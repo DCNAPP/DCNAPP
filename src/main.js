@@ -15,7 +15,7 @@ let window;
 function createWindow() {
     window = new BrowserWindow();
     window.maximize();
-    window.setMenu(null);
+    // window.setMenu(null);
     
     window.loadURL('file://' + __dirname + '/index.html')
 
@@ -25,4 +25,19 @@ function createWindow() {
 }
 
 
-app.on('ready', createWindow);
+// app.on('ready', createWindow);
+
+app.on('ready', () => {
+    createWindow();
+
+    var handleRedirect = (e, url) => {
+        if(url != app.getURL()) {
+          e.preventDefault()
+          require('electron').shell.openExternal(url)
+        }
+    }
+
+    app.on('will-navigate', handleRedirect)
+    app.on('new-window', handleRedirect)
+
+});
