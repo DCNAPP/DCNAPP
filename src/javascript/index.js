@@ -1,4 +1,4 @@
-var version = "v1.4.1";
+var version = "v1.4.2";
 
 
 $(document).ready(function(){
@@ -9,6 +9,13 @@ $(document).ready(function(){
     $(".ep").click(function() {
         $(".dropdown-list").hide('fast');
     });
+
+    $.getJSON('https://senpai-10.github.io/DCNAPP/config/version.json', function SetValue(data) {  
+        var UpdaterLink = document.querySelector('#updater-link');
+        UpdaterLink.href = `https://github.com/Senpai-10/DCNAPP/releases/download/${data['latest-version']}/updater.exe`;
+    });
+
+    
 });
 
 
