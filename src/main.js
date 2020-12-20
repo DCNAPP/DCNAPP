@@ -15,7 +15,7 @@ let window;
 function createWindow() {
     window = new BrowserWindow();
     window.maximize();
-    // window.setMenu(null);
+    window.setMenu(null);
     
     window.loadURL('file://' + __dirname + '/index.html')
 
