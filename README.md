@@ -1,6 +1,4 @@
-<center>
-<h2>DCNAPP<h2>
-</center>
+<h2 align="center">DCNAPP<h2>
 
 <br>
 
