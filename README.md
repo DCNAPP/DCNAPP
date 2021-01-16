@@ -1,4 +1,4 @@
-<p align="center" style="font-size: 20px">DCNAPP<p>
+<p align="center">DCNAPP<p>
 
 <br>
 
