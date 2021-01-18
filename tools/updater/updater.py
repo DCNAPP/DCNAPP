@@ -15,20 +15,18 @@ def console(msg): os.system(msg)
 
 console('cls')
 
-def ReadJson(Key):
-    r = requests.get('https://senpai-10.github.io/DCNAPP/config/version.json')
-    rj = r.json()
 
-    return(rj[Key])
+r = requests.get('https://senpai-10.github.io/DCNAPP/config/version.json')
+config = r.json()
 
-
+VersionNumber = config['latest-version']
 
 def download(name): 
-    with requests.get(ReadJson("download-url")) as rq:
+    with requests.get(f'https://github.com/Senpai-10/DCNAPP/releases/download/{VersionNumber}/DCNAPP.exe') as rq:
         with open(f'{name}', 'wb') as f:
             f.write(rq.content)
 
-    # if os.path.isfile(name): print('\nDownloading \33[92mDone\33[0m\n')
+    if os.path.isfile(name): print('\nDownloading \33[92mDone\33[0m\n')
 
 
 def delete(name):
@@ -65,24 +63,20 @@ def main():
 
     loading("Checking for updates")
 
-    if ReadVersion() == ReadJson('latest-version'):
+    if ReadVersion() == config['latest-version']:
         print('\nThere is no new update ):\n')
         console('pause')
         exit()
     
     print('\n')
 
-    LatestVersion = ReadJson('latest-version')
-
-    print(f'latest version of DCNAPP = {LatestVersion}\n')
+    print(f'latest version of DCNAPP = {VersionNumber}\n')
 
     # print('Your DCNAPP version = ' + ReadVersion())
 
     print('\n')
 
-    
-
-    if ReadVersion() != ReadJson('latest-version') or ReadVersion() == 'Cannot find version.txt':
+    if ReadVersion() != config['latest-version'] or ReadVersion() == 'Cannot find version.txt':
         print('Type "start" to download the new version\n')
         start = input('\33[90m~ \33[0m')
 
