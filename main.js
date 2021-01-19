@@ -16,7 +16,7 @@ function createWindow() {
     window = new BrowserWindow();
     window.maximize();
     window.setMenu(null);
-    
+
     window.loadURL('file://' + __dirname + '/index.html')
 
     window.on("closed", () => {
@@ -31,9 +31,9 @@ app.on('ready', () => {
     createWindow();
 
     var handleRedirect = (e, url) => {
-        if(url != app.getURL()) {
-          e.preventDefault()
-          require('electron').shell.openExternal(url)
+        if (url != app.getURL()) {
+            e.preventDefault()
+            require('electron').shell.openExternal(url)
         }
     }
 
