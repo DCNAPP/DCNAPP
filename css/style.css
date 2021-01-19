@@ -208,3 +208,23 @@ br {
   font-size: 30px
 }
 
+
+@media only screen and (max-width: 1679px) {#menu-body {transform: translate(590px, -474px);}}
+@media only screen and (max-width: 1652px) {#menu-body {transform: translate(570px, -474px);}}
+@media only screen and (max-width: 1613px) {#menu-body {transform: translate(555px, -474px);}}
+@media only screen and (max-width: 1595px) {#menu-body {transform: translate(540px, -474px);}}
+@media only screen and (max-width: 1567px) {#menu-body {transform: translate(530px, -474px);}}
+@media only screen and (max-width: 1542px) {#menu-body {transform: translate(500px, -474px);}}
+@media only screen and (max-width: 1484px) {#menu-body {transform: translate(480px, -474px);}}
+@media only screen and (max-width: 1440px) {#menu-body {transform: translate(460px, -474px);}}
+@media only screen and (max-width: 1400px) {#menu-body {transform: translate(440px, -474px);}}
+@media only screen and (max-width: 1372px) {#menu-body {transform: translate(420px, -474px);}}
+@media only screen and (max-width: 1314px) {#menu-body {transform: translate(400px, -474px);}}
+@media only screen and (max-width: 1284px) {#menu-body {transform: translate(380px, -474px);}}
+@media only screen and (max-width: 1245px) {#menu-body {transform: translate(360px, -474px);}}
+@media only screen and (max-width: 1202px) {#menu-body {transform: translate(340px, -474px);}}
+@media only screen and (max-width: 1170px) {#menu-body {transform: translate(320px, -474px);}}
+@media only screen and (max-width: 1132px) {#menu-body {transform: translate(290px, -474px);}}
+@media only screen and (max-width: 1116px) {#menu-body {transform: translate(290px, -464px);}}
+@media only screen and (max-width: 1077px) {#menu-body {transform: translate(270px, -464px);}}
+@media only screen and (max-width: 1025px) {#menu-body {transform: translate(250px, -464px);}}
