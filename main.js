@@ -1,4 +1,4 @@
-let version = 'v1.4.3';
+let version = 'v1.5.0';
 
 const electron = require("electron");
 const app = electron.app;
