@@ -1,5 +1,7 @@
 <h1 align="center">DCNAPP</h1>
 
+![status](https://img.shields.io/badge/Status-%20failing-red.svg)
+
 <br>
 
 <div dir="rtl">
