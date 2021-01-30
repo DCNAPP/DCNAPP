@@ -14,9 +14,6 @@
     },
     "build": {
         "appId": "com.senpai-10.dcnapp",
-        "directories": {
-            "buildResources": "UI/*"
-        },
         "productName": "DCNAPP",
         "win": {
             "target": "portable",
