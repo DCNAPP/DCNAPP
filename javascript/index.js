@@ -20,19 +20,7 @@ $(document).ready(function () {
 
 
 
-function SetValue(n) {
-    var word = $(".ep").text();
-    if (word.search(n)) {
-        $.getJSON('https://dcnapp.github.io/Config/urls.json', function SetValue(data) {
 
-            var element = document.querySelector('#frame');
-            element.src = data[n];
-
-        });
-
-        document.getElementById("ep-title").innerHTML = "الحلقة رقم " + n;
-    }
-}
 
 
 function GetValue(n) {
