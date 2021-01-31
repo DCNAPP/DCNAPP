@@ -6,10 +6,10 @@ if (localStorage.getItem("theme") === null) {
 }
 
 // if (localStorage.getItem("theme")  == 'dark') {
-    
+
 // }
 
-if (localStorage.getItem("theme")  == 'light') {
+if (localStorage.getItem("theme") == 'light') {
     r.style.setProperty('--main-bg-color', 'white');
     r.style.setProperty('--ep-title', '#181818');
     var element = document.getElementById("frame");
