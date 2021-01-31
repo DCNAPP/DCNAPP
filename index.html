@@ -1,686 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="javascript/jquery-3.5.1.min.js"></script>
-    <script src="javascript/index.js"></script>
-    <script src="javascript/menu.js"></script>
-    <script src="javascript/theme.js"></script>
-    <title>DCNAPP</title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="javascript/jquery-3.5.1.min.js"></script>
+  <script src="javascript/index.js"></script>
+  <script src="javascript/menu.js"></script>
+  <script src="javascript/theme.js"></script>
+  <title>DCNAPP</title>
 </head>
+
 <body>
 
-    <div id="nav-main">
-      <img id="expand" src="asset/expand_more.svg">
+  <div id="nav-main">
+    <img id="expand" src="asset/expand_more.svg">
 
-      <div id="menu-body" style="display: none;">
-        <br>
+    <div id="menu-body" style="display: none;">
+      <br>
 
-        <!-- settings -->
+      <!-- settings -->
 
-        <div class="elm-body" id="elm-body-settings">
-          <img class="icon" src="asset/settings.svg"><span class="icon-span">Settings</span>
+      <div class="elm-body" id="elm-body-settings">
+        <img class="icon" src="asset/settings.svg"><span class="icon-span">Settings</span>
+        <img class="chevron_right-icon" src="asset/chevron_right.svg">
+      </div>
+
+
+      <div id="settings-inside" style="display: none;">
+        <div class="elm-body" id="elm-body-settings-theme">
+          <img class="icon" src="asset/theme.svg"><span class="icon-span">Theme</span>
           <img class="chevron_right-icon" src="asset/chevron_right.svg">
         </div>
+      </div>
 
-        
-        <div id="settings-inside" style="display: none;">
-          <div class="elm-body" id="elm-body-settings-theme">
-            <img class="icon" src="asset/theme.svg"><span class="icon-span">Theme</span>
-            <img class="chevron_right-icon" src="asset/chevron_right.svg">
-          </div>
+      <div id="settings-inside-theme" style="display: none;">
+        <div class="elm-body" id="elm-body-settings-theme-in-light">
+          <img class="icon" src="asset/sun.svg"><span class="icon-span">Light</span>
+          <!-- <img class="chevron_right-icon" src="asset/chevron_right.svg"> -->
         </div>
+        <br>
+        <div class="elm-body" id="elm-body-settings-theme-in-dark">
+          <img class="icon" src="asset/moon.svg"><span class="icon-span">Dark</span>
+          <!-- <img class="chevron_right-icon" src="asset/chevron_right.svg"> -->
+        </div>
+      </div>
+      <br>
 
-        <div id="settings-inside-theme" style="display: none;">
-          <div class="elm-body" id="elm-body-settings-theme-in-light">
-            <img class="icon" src="asset/sun.svg"><span class="icon-span">Light</span>
-            <!-- <img class="chevron_right-icon" src="asset/chevron_right.svg"> -->
-          </div>
+      <!-- info -->
+
+      <div class="elm-body" id="elm-body-info">
+        <img class="icon" src="asset/info.svg"><span class="icon-span">Info</span>
+        <img class="chevron_right-icon" src="asset/chevron_right.svg">
+      </div>
+
+      <div id="info-inside" style="display: none;">
+        <div id="info-text">
+          <p>Creator: snepai-10</p>
           <br>
-          <div class="elm-body" id="elm-body-settings-theme-in-dark">
-            <img class="icon" src="asset/moon.svg"><span class="icon-span">Dark</span>
-            <!-- <img class="chevron_right-icon" src="asset/chevron_right.svg"> -->
-          </div>
-        </div>
-        <br>
-
-        <!-- info -->
-
-        <div class="elm-body" id="elm-body-info">
-          <img class="icon" src="asset/info.svg"><span class="icon-span">Info</span>
-          <img class="chevron_right-icon" src="asset/chevron_right.svg">
-        </div>
-
-        <div id="info-inside" style="display: none;">
-          <div id="info-text">
-            <p>Creator: snepai-10</p>
-            <br>
-            <p id="version"></p>
-            <br>
-            <center>
+          <p id="version"></p>
+          <br>
+          <center>
             <br>
             <br>
-            <button id="updater-dl" >
+            <button id="updater-dl">
               <a id="updater-link" href="">Download The Updater</a>
             </button>
-            </center>
-          </div>
+          </center>
         </div>
+      </div>
 
+    </div>
+
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+
+
+
+  <center>
+
+    <div>
+      <iframe class="box" id="frame" width="1100" height="600" frameborder="0" src='' allowfullscreen></iframe>
+    </div>
+
+
+    <br>
+
+    <div>
+      <h1 id="ep-title"></h1>
+    </div>
+    <br>
+
+
+    <div class="dropdown">
+      <div class="dropdown-select" id="list">
+        <i class="fa fa-caret-down icon"></i>
+        <span class="select">اختر الحلقة</span>
+      </div>
+
+
+      <div class="dropdown-list" style="display: None;">
+        <div class="dropdown-list__item"><button class="ep" onclick="GetValue('1')"> 1 الحلقة </button></div>
       </div>
 
     </div>
 
     <br>
-    <br>
-    <br>
-
-    
 
 
-    <center>
-
-        <div>
-          <iframe class="box" id="frame" width="1100" height="600" frameborder="0" src='' allowfullscreen ></iframe>
-        </div>
-        
-
-        <br>
-
-        <div>
-          <h1 id="ep-title"></h1>
-        </div>
-        <br>
-
-
-        <div class="dropdown">
-            <div class="dropdown-select" id="list">
-              <i class="fa fa-caret-down icon"></i>
-              <span class="select">اختر الحلقة</span>
-            </div>
-
-            
-
-            <div class="dropdown-list" style="display: None;">
-            
-
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('1')">   1 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('2')">   2 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('3')">   3 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('4')">   4 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('5')">   5 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('7')">   7 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('8')">   8 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('9')">   9 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('10')">  10 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('11')">  11 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('12')">  12 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('13')">  13 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('15')">  15 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('16')">  16 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('18')">  18 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('20')">  20 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('22')">  22 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('23')">  23 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('27')">  27 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('28')">  28 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('31')">  31 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('32')">  32 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('34')">  34 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('35')">  35 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('38')">  38 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('39')">  39 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('40')">  40 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('42')">  42 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('43')">  43 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('46')">  46 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('48')">  48 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('49')">  49 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('50')">  50 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('52')">  52 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('53')">  53 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('54')">  54 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('57')">  57 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('58')">  58 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('60')">  60 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('63')">  63 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('68')">  68 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('70')">  70 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('72')">  72 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('75')">  75 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('76')">  76 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('77')">  77 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('78')">  78 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('81')">  81 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('82')">  82 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('84')">  84 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('85')">  85 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('86')">  86 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('91')">  91 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('96')">  96 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('98')">  98 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('99')">  99 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('100')"> 100 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('101')"> 101 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('102')"> 102 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('103')"> 103 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('104')"> 104 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('105')"> 105 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('110')"> 110 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('113')"> 113 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('114')"> 114 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('115')"> 115 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('116')"> 116 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('117')"> 117 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('118')"> 118 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('121')"> 121 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('122')"> 122 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('128')"> 128 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('129')"> 129 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('130')"> 130 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('131')"> 131 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('132')"> 132 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('133')"> 133 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('134')"> 134 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('136')"> 136 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('137')"> 137 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('138')"> 138 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('139')"> 139 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('141')"> 141 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('142')"> 142 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('144')"> 144 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('145')"> 145 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('146')"> 146 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('147')"> 147 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('153')"> 153 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('154')"> 154 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('156')"> 156 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('157')"> 157 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('162')"> 162 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('163')"> 163 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('164')"> 164 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('166')"> 166 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('170')"> 170 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('171')"> 171 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('172')"> 172 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('174')"> 174 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('176')"> 176 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('188')"> 188 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('189')"> 189 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('190')"> 190 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('191')"> 191 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('192')"> 192 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('193')"> 193 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('194')"> 194 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('195')"> 195 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('199')"> 199 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('200')"> 200 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('205')"> 205 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('206')"> 206 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('212')"> 212 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('213')"> 213 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('217')"> 217 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('218')"> 218 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('219')"> 219 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('220')"> 220 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('221')"> 221 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('222')"> 222 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('223')"> 223 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('224')"> 224 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('226')"> 226 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('227')"> 227 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('228')"> 228 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('229')"> 229 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('230')"> 230 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('231')"> 231 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('233')"> 233 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('234')"> 234 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('238')"> 238 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('240')"> 240 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('241')"> 241 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('242')"> 242 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('243')"> 243 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('244')"> 244 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('246')"> 246 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('247')"> 247 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('249')"> 249 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('250')"> 250 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('253')"> 253 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('254')"> 254 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('258')"> 258 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('259')"> 259 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('263')"> 263 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('266')"> 266 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('267')"> 267 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('268')"> 268 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('269')"> 269 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('270')"> 270 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('271')"> 271 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('272')"> 272 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('274')"> 274 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('275')"> 275 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('277')"> 277 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('278')"> 278 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('279')"> 279 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('280')"> 280 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('284')"> 284 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('286')"> 286 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('287')"> 287 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('288')"> 288 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('289')"> 289 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('290')"> 290 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('291')"> 291 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('301')"> 301 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('304')"> 304 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('305')"> 305 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('306')"> 306 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('307')"> 307 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('309')"> 309 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('312')"> 312 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('316')"> 316 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('317')"> 317 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('323')"> 323 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('324')"> 324 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('325')"> 325 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('326')"> 326 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('327')"> 327 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('329')"> 329 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('332')"> 332 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('335')"> 335 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('336')"> 336 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('338')"> 338 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('339')"> 339 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('340')"> 340 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('341')"> 341 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('343')"> 343 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('344')"> 344 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('345')"> 345 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('346')"> 346 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('347')"> 347 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('350')"> 350 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('351')"> 351 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('354')"> 354 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('355')"> 355 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('356')"> 356 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('358')"> 358 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('359')"> 359 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('361')"> 361 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('362')"> 362 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('366')"> 366 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('367')"> 367 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('371')"> 371 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('372')"> 372 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('374')"> 374 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('375')"> 375 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('381')"> 381 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('383')"> 383 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('385')"> 385 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('386')"> 386 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('387')"> 387 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('390')"> 390 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('391')"> 391 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('394')"> 394 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('395')"> 395 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('396')"> 396 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('398')"> 398 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('399')"> 399 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('400')"> 400 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('401')"> 401 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('402')"> 402 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('406')"> 406 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('407')"> 407 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('408')"> 408 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('411')"> 411 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('412')"> 412 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('415')"> 415 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('416')"> 416 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('417')"> 417 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('421')"> 421 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('422')"> 422 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('425')"> 425 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('427')"> 427 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('428')"> 428 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('429')"> 429 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('430')"> 430 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('431')"> 431 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('432')"> 432 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('435')"> 435 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('436')"> 436 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('438')"> 438 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('443')"> 443 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('444')"> 444 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('445')"> 445 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('446')"> 446 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('447')"> 447 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('449')"> 449 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('453')"> 453 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('454')"> 454 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('455')"> 455 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('457')"> 457 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('458')"> 458 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('460')"> 460 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('462')"> 462 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('463')"> 463 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('464')"> 464 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('465')"> 465 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('466')"> 466 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('467')"> 467 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('469')"> 469 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('470')"> 470 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('472')"> 472 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('473')"> 473 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('474')"> 474 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('476')"> 476 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('477')"> 477 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('479')"> 479 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('481')"> 481 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('482')"> 482 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('484')"> 484 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('485')"> 485 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('487')"> 487 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('488')"> 488 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('490')"> 490 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('491')"> 491 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('492')"> 492 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('493')"> 493 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('494')"> 494 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('495')"> 495 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('496')"> 496 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('497')"> 497 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('498')"> 498 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('499')"> 499 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('500')"> 500 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('501')"> 501 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('502')"> 502 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('503')"> 503 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('504')"> 504 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('505')"> 505 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('506')"> 506 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('507')"> 507 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('508')"> 508 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('509')"> 509 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('510')"> 510 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('511')"> 511 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('513')"> 513 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('514')"> 514 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('515')"> 515 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('516')"> 516 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('517')"> 517 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('521')"> 521 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('522')"> 522 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('523')"> 523 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('524')"> 524 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('525')"> 525 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('526')"> 526 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('528')"> 528 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('529')"> 529 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('530')"> 530 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('531')"> 531 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('532')"> 532 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('533')"> 533 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('534')"> 534 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('535')"> 535 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('537')"> 537 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('538')"> 538 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('542')"> 542 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('543')"> 543 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('545')"> 545 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('546')"> 546 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('549')"> 549 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('550')"> 550 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('551')"> 551 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('552')"> 552 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('557')"> 557 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('558')"> 558 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('559')"> 559 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('560')"> 560 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('561')"> 561 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('563')"> 563 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('564')"> 564 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('568')"> 568 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('569')"> 569 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('571')"> 571 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('572')"> 572 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('573')"> 573 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('574')"> 574 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('575')"> 575 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('576')"> 576 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('578')"> 578 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('579')"> 579 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('580')"> 580 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('581')"> 581 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('583')"> 583 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('584')"> 584 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('585')"> 585 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('586')"> 586 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('587')"> 587 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('589')"> 589 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('590')"> 590 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('592')"> 592 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('593')"> 593 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('597')"> 597 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('598')"> 598 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('600')"> 600 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('601')"> 601 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('608')"> 608 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('609')"> 609 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('610')"> 610 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('611')"> 611 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('612')"> 612 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('613')"> 613 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('614')"> 614 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('615')"> 615 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('616')"> 616 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('617')"> 617 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('618')"> 618 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('619')"> 619 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('620')"> 620 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('621')"> 621 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('622')"> 622 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('623')"> 623 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('624')"> 624 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('625')"> 625 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('626')"> 626 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('627')"> 627 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('628')"> 628 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('632')"> 632 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('633')"> 633 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('642')"> 642 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('643')"> 643 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('644')"> 644 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('645')"> 645 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('646')"> 646 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('647')"> 647 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('648')"> 648 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('649')"> 649 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('650')"> 650 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('651')"> 651 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('652')"> 652 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('653')"> 653 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('654')"> 654 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('655')"> 655 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('656')"> 656 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('657')"> 657 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('659')"> 659 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('660')"> 660 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('661')"> 661 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('662')"> 662 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('667')"> 667 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('668')"> 668 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('671')"> 671 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('672')"> 672 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('673')"> 673 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('674')"> 674 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('675')"> 675 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('676')"> 676 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('681')"> 681 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('682')"> 682 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('683')"> 683 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('684')"> 684 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('685')"> 685 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('690')"> 690 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('691')"> 691 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('699')"> 699 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('700')"> 700 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('701')"> 701 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('702')"> 702 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('703')"> 703 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('704')"> 704 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('705')"> 705 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('706')"> 706 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('710')"> 710 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('711')"> 711 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('712')"> 712 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('713')"> 713 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('714')"> 714 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('715')"> 715 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('722')"> 722 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('723')"> 723 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('724')"> 724 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('725')"> 725 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('727')"> 727 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('728')"> 728 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('731')"> 731 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('732')"> 732 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('734')"> 734 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('738')"> 738 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('739')"> 739 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('740')"> 740 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('741')"> 741 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('744')"> 744 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('745')"> 745 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('746')"> 746 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('747')"> 747 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('748')"> 748 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('749')"> 749 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('751')"> 751 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('752')"> 752 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('754')"> 754 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('755')"> 755 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('756')"> 756 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('759')"> 759 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('760')"> 760 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('763')"> 763 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('764')"> 764 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('765')"> 765 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('766')"> 766 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('770')"> 770 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('771')"> 771 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('772')"> 772 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('773')"> 773 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('779')"> 779 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('780')"> 780 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('781')"> 781 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('782')"> 782 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('783')"> 783 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('785')"> 785 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('786')"> 786 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('787')"> 787 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('788')"> 788 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('792')"> 792 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('793')"> 793 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('808')"> 808 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('809')"> 809 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('810')"> 810 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('811')"> 811 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('812')"> 812 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('814')"> 814 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('815')"> 815 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('822')"> 822 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('823')"> 823 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('827')"> 827 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('828')"> 828 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('830')"> 830 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('831')"> 831 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('832')"> 832 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('836')"> 836 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('837')"> 837 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('843')"> 843 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('844')"> 844 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('847')"> 847 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('848')"> 848 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('849')"> 849 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('850')"> 850 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('853')"> 853 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('854')"> 854 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('861')"> 861 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('862')"> 862 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('863')"> 863 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('864')"> 864 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('866')"> 866 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('867')"> 867 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('872')"> 872 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('873')"> 873 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('874')"> 874 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('878')"> 878 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('879')"> 879 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('881')"> 881 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('882')"> 882 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('885')"> 885 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('886')"> 886 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('887')"> 887 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('888')"> 888 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('889')"> 889 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('890')"> 890 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('894')"> 894 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('895')"> 895 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('896')"> 896 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('897')"> 897 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('901')"> 901 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('902')"> 902 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('909')"> 909 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('910')"> 910 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('916')"> 916 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('917')"> 917 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('919')"> 919 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('920')"> 920 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('925')"> 925 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('926')"> 926 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('927')"> 927 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('928')"> 928 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('941')"> 941 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('942')"> 942 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('952')"> 952 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('953')"> 953 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('954')"> 954 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('971')"> 971 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('972')"> 972 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('973')"> 973 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('974')"> 974 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('983')"> 983 الحلقة  </button></div>
-              <div class="dropdown-list__item"><button class="ep" onclick="GetValue('984')"> 984 الحلقة  </button></div>
-
-
-
-            </div>
-      </div>
-
-        <br>
-        
-
-    </center>
+  </center>
 
   <br>
   <br>
   <br>
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
