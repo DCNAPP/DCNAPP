@@ -7,15 +7,15 @@ $.getJSON('https://dcnapp.github.io/Config/EpisodesData.json', data => {
 
     for (var i = 0; i < count; i++) {
         var item = data[i];
-
-        const EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(${item['url']})">${item['title']}</button></div>`
-        console.log(EpisodeElement);
-        container.innerHTML += EpisodeElement
+        var EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
+        container.innerHTML += EpisodeElement;
     }
-})
+});
 
 
 
-function LoadEpisodes(url) {
-    console.log(url);
+function LoadEpisodes(url, title) {
+    UpdateTitle(title)
 }
+
+const UpdateTitle = title => document.getElementById("ep-title").innerHTML = title
