@@ -16,6 +16,8 @@ $.getJSON('https://dcnapp.github.io/Config/EpisodesData.json', data => {
 
 function LoadEpisodes(url, title) {
     UpdateTitle(title)
+    document.querySelector('#frame').src = url
 }
 
 const UpdateTitle = title => document.getElementById("ep-title").innerHTML = title
+
