@@ -1,4 +1,4 @@
-var version = "v1.5.1";
+var version = "v1.5.2";
 
 $(document).ready(function () {
     $("#list").click(function () {
@@ -13,7 +13,6 @@ $(document).ready(function () {
         var UpdaterLink = document.querySelector('#updater-link');
         UpdaterLink.href = `https://github.com/DCNAPP/DCNAPP/releases/download/${data['latest-version']}/updater.exe`;
     });
-
 
 });
 
