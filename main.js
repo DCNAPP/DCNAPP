@@ -11,9 +11,12 @@ let window;
 function createWindow() {
     window = new BrowserWindow();
     window.maximize();
-    window.setMenu(null);
 
     window.loadURL('file://' + __dirname + '/index.html')
+
+    window.on('enter-full-screen', () => {
+        window.removeMenu()
+    })
 
     window.on("closed", () => {
         window = null;
