@@ -15,9 +15,18 @@ $.getJSON('https://dcnapp.github.io/Config/EpisodesData.json', data => {
 
 
 function LoadEpisodes(url, title) {
+    CheckForUpdates()
     UpdateTitle(title)
     document.querySelector('#frame').src = url
 }
 
 const UpdateTitle = title => document.getElementById("ep-title").innerHTML = title
+const CheckForUpdates = () => {
+    $.getJSON('https://dcnapp.github.io/Config/version.json', data => {
 
+        if (version == data['latest-version']) { }
+        else {
+            alert('يوجد تحديث جديد لتحميل التحديث قم بتشغيل \nupdater.exe')
+        }
+    });
+}
