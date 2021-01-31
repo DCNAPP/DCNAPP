@@ -178,7 +178,7 @@ br {
 	background-color: rgb(26, 24, 24);
 }
 
-#dropdown-list__item {
+.dropdown-list_item {
   padding: 1rem;
   font-size: 1.4rem;
 }
