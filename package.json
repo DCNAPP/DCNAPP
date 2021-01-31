@@ -3,7 +3,7 @@
     "version": "1.5.2",
     "main": "main.js",
     "author": "senpai-10",
-    "repository": "https://github.com/Senpai-10/DCNAPP",
+    "repository": "https://github.com/DCNAPP/DCNAPP",
     "devDependencies": {
         "electron": "^10.1.5",
         "electron-builder": "^22.9.1"
