@@ -9,7 +9,7 @@ $(document).ready(function () {
         $("#dropdown-list").hide('fast');
     });
 
-    $.getJSON('https://dcnapp.github.io/Config/version.json', function SetValue(data) {
+    $.getJSON('https://dcnapp.github.io/Config/version.json', data => {
         var UpdaterLink = document.querySelector('#updater-link');
         UpdaterLink.href = `https://github.com/DCNAPP/DCNAPP/releases/download/${data['latest-version']}/updater.exe`;
     });
