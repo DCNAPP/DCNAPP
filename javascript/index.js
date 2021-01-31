@@ -2,11 +2,11 @@ var version = "v1.5.1";
 
 $(document).ready(function () {
     $("#list").click(function () {
-        $(".dropdown-list").toggle('fast');
+        $("#dropdown-list").toggle('fast');
     });
 
     $(".ep").click(function () {
-        $(".dropdown-list").hide('fast');
+        $("#dropdown-list").hide('fast');
     });
 
     $.getJSON('https://dcnapp.github.io/Config/version.json', function SetValue(data) {
