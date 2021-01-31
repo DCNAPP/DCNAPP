@@ -1,5 +1,3 @@
-// <div class="dropdown-list__item"><button class="ep" onclick="GetValue('1')">   1 الحلقة  </button></div>
-
 $.getJSON('https://dcnapp.github.io/Config/EpisodesData.json', data => {
     var count = data.length;
     var container = document.getElementById("dropdown-list");
