@@ -1,5 +1,3 @@
-let version = 'v1.5.1';
-
 const electron = require("electron");
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
@@ -7,8 +5,6 @@ const path = require("path");
 const url = require("url");
 const write = require('write');
 
-
-// write.sync('version.txt', version);
 
 let window;
 
@@ -24,8 +20,6 @@ function createWindow() {
     })
 }
 
-
-// app.on('ready', createWindow);
 
 app.on('ready', () => {
     createWindow();
