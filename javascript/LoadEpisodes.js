@@ -1,10 +1,15 @@
 $.getJSON('https://dcnapp.github.io/Config/EpisodesData.json', data => {
     var count = data.length;
     var container = document.getElementById("dropdown-list");
+    var EpisodeElement;
 
     for (var i = 0; i < count; i++) {
         var item = data[i];
-        var EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
+        if (item.isfiller === true) {
+            EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}<span class="filler">فلر</span></button></div>`
+        } else {
+            EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
+        }
         container.innerHTML += EpisodeElement;
     }
 });
