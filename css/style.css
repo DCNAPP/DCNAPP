@@ -183,6 +183,16 @@ br {
   font-size: 1.4rem;
 }
 
+.filler {
+  padding: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 4px;
+  margin-left: 4px;
+  border: 1px solid rgb(42, 56, 189);
+  border-radius: 10px;
+}
+
 .ep {
   width: 100%;
   height: 60px;
