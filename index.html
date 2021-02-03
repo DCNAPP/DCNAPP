@@ -21,60 +21,61 @@
   <div id="nav-main">
     <img id="expand" src="asset/expand_more.svg">
 
-    <div id="menu-body" style="display: none;">
-      <br>
+    
 
-      <!-- settings -->
+  </div>
 
-      <div class="elm-body" id="elm-body-settings">
-        <img class="icon" src="asset/settings.svg"><span class="icon-span">Settings</span>
+  <div id="menu-body" style="display: none;">
+
+    <!-- settings -->
+
+    <div class="elm-body" id="elm-body-settings">
+      <img class="icon" src="asset/settings.svg"><span class="icon-span">Settings</span>
+      <img class="chevron_right-icon" src="asset/chevron_right.svg">
+    </div>
+
+
+    <div id="settings-inside" style="display: none;">
+      <div class="elm-body" id="elm-body-settings-theme">
+        <img class="icon" src="asset/theme.svg"><span class="icon-span">Theme</span>
         <img class="chevron_right-icon" src="asset/chevron_right.svg">
       </div>
+    </div>
 
-
-      <div id="settings-inside" style="display: none;">
-        <div class="elm-body" id="elm-body-settings-theme">
-          <img class="icon" src="asset/theme.svg"><span class="icon-span">Theme</span>
-          <img class="chevron_right-icon" src="asset/chevron_right.svg">
-        </div>
+    <div id="settings-inside-theme" style="display: none;">
+      <div class="elm-body" id="elm-body-settings-theme-in-light">
+        <img class="icon" src="asset/sun.svg"><span class="icon-span">Light</span>
+        <!-- <img class="chevron_right-icon" src="asset/chevron_right.svg"> -->
       </div>
+      <br>
+      <div class="elm-body" id="elm-body-settings-theme-in-dark">
+        <img class="icon" src="asset/moon.svg"><span class="icon-span">Dark</span>
+        <!-- <img class="chevron_right-icon" src="asset/chevron_right.svg"> -->
+      </div>
+    </div>
+    <br>
 
-      <div id="settings-inside-theme" style="display: none;">
-        <div class="elm-body" id="elm-body-settings-theme-in-light">
-          <img class="icon" src="asset/sun.svg"><span class="icon-span">Light</span>
-          <!-- <img class="chevron_right-icon" src="asset/chevron_right.svg"> -->
-        </div>
+    <!-- info -->
+
+    <div class="elm-body" id="elm-body-info">
+      <img class="icon" src="asset/info.svg"><span class="icon-span">Info</span>
+      <img class="chevron_right-icon" src="asset/chevron_right.svg">
+    </div>
+
+    <div id="info-inside" style="display: none;">
+      <div id="info-text">
+        <p>Creator: snepai-10</p>
         <br>
-        <div class="elm-body" id="elm-body-settings-theme-in-dark">
-          <img class="icon" src="asset/moon.svg"><span class="icon-span">Dark</span>
-          <!-- <img class="chevron_right-icon" src="asset/chevron_right.svg"> -->
-        </div>
-      </div>
-      <br>
-
-      <!-- info -->
-
-      <div class="elm-body" id="elm-body-info">
-        <img class="icon" src="asset/info.svg"><span class="icon-span">Info</span>
-        <img class="chevron_right-icon" src="asset/chevron_right.svg">
-      </div>
-
-      <div id="info-inside" style="display: none;">
-        <div id="info-text">
-          <p>Creator: snepai-10</p>
+        <p id="version"></p>
+        <br>
+        <center>
           <br>
-          <p id="version"></p>
           <br>
-          <center>
-            <br>
-            <br>
-            <button id="updater-dl">
-              <a id="updater-link" href="">Download The Updater</a>
-            </button>
-          </center>
-        </div>
+          <button id="updater-dl">
+            <a id="updater-link" href="">Download The Updater</a>
+          </button>
+        </center>
       </div>
-
     </div>
 
   </div>
