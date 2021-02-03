@@ -63,14 +63,12 @@ br {
 
 #menu-body {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(675px, -473px);
+  right: 0;
+  margin-right: 5px;
   z-index: 99;
   background-color: rgb(39, 39, 39);
   width: 250px;
   height: 250px;
-
 }
 
 .elm-body {
