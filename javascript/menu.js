@@ -1,3 +1,72 @@
+class Menu {
+    constructor(ContainerID) {
+        this.ContainerID = ContainerID
+    }
+
+    Options(options) {
+        var count = options.length;
+        var container = document.getElementById(this.ContainerID);
+        var MenuElement;
+
+        for (var i = 0; i < count; i++) {
+            var item = options[i];
+            if (item.icon == null) {
+                MenuElement = `
+                <div class="elm-body">
+                    <span class="non-icon-span">${item.Name}</span>
+                    <img class="chevron_right-icon" src="asset/chevron_right.svg">
+                </div>
+                `
+            } else {
+                MenuElement = `
+                <div class="elm-body">
+                    <img class="icon" src=${item.icon}><span class="icon-span">${item.Name}</span>
+                    <img class="chevron_right-icon" src="asset/chevron_right.svg">
+                </div>
+                `
+            }
+
+            container.innerHTML += MenuElement;
+        }
+
+
+    }
+}
+
+const menu = new Menu('MenuContainerID')
+
+menu.Options([
+    {
+        "Name": "test1",
+        "icon": null
+    },
+    {
+        "Name": "test2",
+        "icon": 'asset/settings.svg'
+    },
+    {
+        "Name": "test3",
+        "icon": null
+    },
+    {
+        "Name": "test4",
+        "icon": null
+    },
+    {
+        "Name": "test5",
+        "icon": null
+    }
+])
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function () {
 
     // toggle expand arrow
@@ -64,3 +133,4 @@ $(document).ready(function () {
 
 
 });
+
