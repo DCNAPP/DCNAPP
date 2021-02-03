@@ -1,6 +1,9 @@
 class Menu {
+
     constructor(ContainerID) {
         this.ContainerID = ContainerID
+        this.MenuOptions = []
+
     }
 
     Options(options) {
@@ -10,16 +13,18 @@ class Menu {
 
         for (var i = 0; i < count; i++) {
             var item = options[i];
+            this.MenuOptions.push(item.Name)
+
             if (item.icon == null) {
                 MenuElement = `
-                <div class="elm-body">
+                <div class="elm-body" id=${item.Name}>
                     <span class="non-icon-span">${item.Name}</span>
                     <img class="chevron_right-icon" src="asset/chevron_right.svg">
                 </div>
                 `
             } else {
                 MenuElement = `
-                <div class="elm-body">
+                <div class="elm-body" id=${item.Name}>
                     <img class="icon" src=${item.icon}><span class="icon-span">${item.Name}</span>
                     <img class="chevron_right-icon" src="asset/chevron_right.svg">
                 </div>
@@ -28,12 +33,44 @@ class Menu {
 
             container.innerHTML += MenuElement;
         }
+    }
 
+    
 
+    childOption(Name, menuOption, icon = null) {
+        let childElement
+
+        if (icon == null) {
+            childElement = `
+            <div class="elm-body" id=${Name} style="display: none">
+                <span class="non-icon-span">${Name}</span>
+            </div>
+            `
+        } else {    
+            childElement = `
+            <div class="elm-body" id=${Name} style="display: none">
+                <img class="icon" src=${icon}><span class="icon-span">${Name}</span>
+            </div>
+            `
+        }
+
+        document.getElementById('MenuContainerID').insertAdjacentHTML("beforeend", childElement); 
+        
+        document.getElementById(menuOption).addEventListener('click', event => {
+
+            for (var i = 0; i < this.MenuOptions.length; i++) {
+                let item = this.MenuOptions[i]
+                document.getElementById(item).style.display = 'none'
+            }
+
+            document.getElementById(Name).style.display = "block"
+        });
     }
 }
 
 const menu = new Menu('MenuContainerID')
+
+
 
 menu.Options([
     {
@@ -58,7 +95,8 @@ menu.Options([
     }
 ])
 
-
+menu.childOption("theme", "test1", 'asset/settings.svg')
+menu.childOption("theme2", "test1")
 
 
 
