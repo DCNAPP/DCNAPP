@@ -26,8 +26,7 @@ const UpdateTitle = title => document.getElementById("ep-title").innerHTML = tit
 const CheckForUpdates = () => {
     $.getJSON('https://dcnapp.github.io/Config/version.json', data => {
 
-        if (version == data['latest-version']) { }
-        else {
+        if (version == data['latest-version']) {} else {
             alert('يوجد تحديث جديد لتحميل التحديث قم بتشغيل \nupdater.exe')
         }
     });
