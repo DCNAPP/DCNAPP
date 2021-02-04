@@ -10,7 +10,8 @@
     },
     "scripts": {
         "start": "electron .",
-        "build": "electron-builder"
+        "build": "electron-builder",
+        "build-win": "electron-builder --win=portable"
     },
     "build": {
         "appId": "com.senpai-10.dcnapp",
