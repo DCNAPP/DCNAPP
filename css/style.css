@@ -196,8 +196,11 @@ br {
   padding: 2px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-right: 4px;
-  margin-left: 4px;
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  margin-left: 160px;
+  margin-top: -4px;
   border: 1px solid rgb(42, 56, 189);
   border-radius: 10px;
 }
