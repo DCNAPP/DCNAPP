@@ -74,16 +74,6 @@ br {
   height: 250px;
 }
 
-#MenuContainerID {
-  position: fixed;
-  right: 0;
-  margin-right: 5px;
-  z-index: 99;
-  background-color: rgb(39, 39, 39);
-  width: 250px;
-  height: auto;
-}
-
 .elm-body {
   padding-top: 2%;
   padding-bottom: 1%;
