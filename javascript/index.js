@@ -14,4 +14,10 @@ $(document).ready(function () {
         UpdaterLink.href = `https://github.com/DCNAPP/DCNAPP/releases/download/${data['latest-version']}/updater.exe`;
     });
 
+    if (localStorage.getItem("filter") == "true") {
+        document.getElementById("filter").innerHTML = `<img style="width: 30px;" src="asset/filter_active.svg">`
+    } else {
+        document.getElementById("filter").innerHTML = `<img style="width: 30px;" src="asset/filter.svg">`
+    }
+
 });
