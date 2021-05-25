@@ -214,6 +214,10 @@ br {
   border: solid 2px rgb(55, 108, 223);
 }
 
+.up {
+  transform: rotate(180deg);
+}
+
 #filter {
   width: 100%;
   height: 60px;
