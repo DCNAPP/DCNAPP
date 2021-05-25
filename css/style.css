@@ -16,7 +16,7 @@ body {
 }
 
 br {
-  -webkit-user-select: none;
+  user-select: none;
 }
 
 #updater-dl {
@@ -29,7 +29,7 @@ br {
 }
 
 #updater-dl a {
-  -webkit-user-select: none;
+  user-select: none;
   color: white;
   text-decoration: none;
 }
@@ -50,7 +50,7 @@ br {
 }
 
 #nav-main {
-  -webkit-user-select: none;
+  user-select: none;
   background-color: #0f0e0e;
   height: 45px;
   width: 100%;
@@ -66,7 +66,7 @@ br {
 }
 
 #menu-body {
-  -webkit-user-select: none;
+  user-select: none;
   position: fixed;
   right: 0;
   margin-right: 5px;
@@ -99,7 +99,7 @@ br {
   padding-bottom: 1%;
   width: 90%;
   margin: 0 auto;
-  -webkit-user-select: text;
+  user-select: text;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
@@ -134,7 +134,7 @@ br {
 .dropdown {
   width: 30rem;
   position: relative;
-  -webkit-user-select: none;
+  user-select: none;
   margin-right: 620px;
 }
 
@@ -222,6 +222,20 @@ br {
   transition: 0.2s linear;
   background-color: rgb(55, 108, 223);
 }
+
+.filter {
+  width: 100%;
+  height: 60px;
+  border: none;
+  background-color: rgb(27, 27, 27);
+  outline: none;
+  color: var(--main-color);
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s linear;
+}
+
+
 
 #ep-title {
   margin-left: 40%;
