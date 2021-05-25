@@ -22,7 +22,7 @@ if (localStorage.getItem("filter") == "true") {
         for (var i = 0; i < count; i++) {
             var item = data[i];
             if (item.isfiller === true) {
-                EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}<span class="filler">فلر</span></button></div>`
+                EpisodeElement = `<div class="dropdown-list_item"><button class="ep filler-ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
             } else {
                 EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
             }
