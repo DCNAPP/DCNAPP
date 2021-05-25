@@ -1,4 +1,4 @@
-var version = "v1.5.2";
+var version = "v1.6.0";
 
 $(document).ready(function () {
     $("#list").click(function () {
