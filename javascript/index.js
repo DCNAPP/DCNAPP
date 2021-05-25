@@ -2,7 +2,8 @@ var version = "v1.5.2";
 
 $(document).ready(function () {
     $("#list").click(function () {
-        $("#dropdown-list").toggle('fast');
+        document.getElementById("caret-icon").classList.toggle("up")
+        $("#dropdown-list").toggle('fast')
     });
 
     $(".ep").click(function () {
