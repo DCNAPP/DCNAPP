@@ -9,7 +9,11 @@ const write = require('write');
 let window;
 
 function createWindow() {
-    window = new BrowserWindow();
+    window = new BrowserWindow({
+        webPreferences: {
+            nativeWindowOpen: true
+        }
+    });
     window.maximize();
 
     window.loadURL('file://' + __dirname + '/index.html')
