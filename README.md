@@ -30,6 +30,12 @@
 ## طريقة التثبيت  
 ---
 
-لم يكتمل بعد . . .
+## windows
+
+- اذهب الي [latest version](https://github.com/DCNAPP/DCNAPP/releases/tag/v1.6.1)
+
+- قم بتحميل updater.exe, DCNAPP.exe
+
+### **تنبيه يجب ان يكون `DCNAPP.exe` و `updater.exe` في نفس المجلد**
 
 </div>
