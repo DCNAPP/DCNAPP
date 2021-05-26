@@ -47,7 +47,11 @@ function LoadEpisodes(url, title) {
     document.querySelector('#frame').src = url
 }
 
-const UpdateTitle = title => document.getElementById("ep-title").innerHTML = title
+const UpdateTitle = (title) => {
+    document.getElementById("report-title-div").innerHTML += `<button id="report-button" onclick="episode_not_working('${title}')">not working?</button>`
+    document.getElementById("report-title-div").innerHTML += `<h1 id="ep-title">${title}</h1>`
+}
+
 const CheckForUpdates = () => {
     $.getJSON('https://dcnapp.github.io/Config/version.json', data => {
 
