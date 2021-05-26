@@ -47,6 +47,8 @@ function LoadEpisodes(url, title) {
     CheckForUpdates()
     UpdateTitle(title)
     document.querySelector('#frame').src = url
+    display.hide("#dropdown-list")
+    document.getElementById("caret-icon").classList.toggle("up")
 }
 
 const UpdateTitle = (title) => {
