@@ -25,6 +25,11 @@ function createWindow() {
         window.removeMenu()
     })
 
+    window.webContents.on('new-window', (event, url) => {
+        event.preventDefault()
+        window.webContents.send('blocked-new-window', url)
+    })
+
     window.on("closed", () => {
         window = null;
     })
