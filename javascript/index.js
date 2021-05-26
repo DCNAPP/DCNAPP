@@ -1,4 +1,5 @@
-var version = "v1.6.1";
+var package_json = require('./package.json')
+var version = package_json.version
 var version_config = "https://dcnapp.github.io/Config/version.json"
 var episodes_data = "https://dcnapp.github.io/Config/EpisodesData.json"
 
