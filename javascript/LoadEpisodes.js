@@ -1,34 +1,36 @@
 if (localStorage.getItem("filter") == "true") {
-    $.getJSON('https://dcnapp.github.io/Config/EpisodesData.json', data => {
-        var count = data.length;
-        var container = document.getElementById("dropdown-list");
-        var EpisodeElement;
+    GET_JSON(episodes_data)
+        .then(data => {
+            var count = data.length;
+            var container = document.getElementById("dropdown-list");
+            var EpisodeElement;
 
-        for (var i = 0; i < count; i++) {
-            var item = data[i];
-            
-            if (item.isfiller == false) {
-                EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
+            for (var i = 0; i < count; i++) {
+                var item = data[i];
+                
+                if (item.isfiller == false) {
+                    EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
+                    container.innerHTML += EpisodeElement;
+                }
+            }
+        })
+} else {
+    GET_JSON(episodes_data)
+        .then(data => {
+            var count = data.length;
+            var container = document.getElementById("dropdown-list");
+            var EpisodeElement;
+
+            for (var i = 0; i < count; i++) {
+                var item = data[i];
+                if (item.isfiller === true) {
+                    EpisodeElement = `<div class="dropdown-list_item"><button class="ep filler-ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
+                } else {
+                    EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
+                }
                 container.innerHTML += EpisodeElement;
             }
-        }
-    })
-} else {
-    $.getJSON('https://dcnapp.github.io/Config/EpisodesData.json', data => {
-        var count = data.length;
-        var container = document.getElementById("dropdown-list");
-        var EpisodeElement;
-
-        for (var i = 0; i < count; i++) {
-            var item = data[i];
-            if (item.isfiller === true) {
-                EpisodeElement = `<div class="dropdown-list_item"><button class="ep filler-ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
-            } else {
-                EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
-            }
-            container.innerHTML += EpisodeElement;
-        }
-    })
+        })
 }
 
 function toggle_filter()
@@ -53,10 +55,10 @@ const UpdateTitle = (title) => {
 }
 
 const CheckForUpdates = () => {
-    $.getJSON('https://dcnapp.github.io/Config/version.json', data => {
-
-        if (version == data['latest-version']) {} else {
-            alert('يوجد تحديث جديد لتحميل التحديث قم بتشغيل \nupdater.exe')
-        }
-    });
+    GET_JSON(version_config)
+        .then(data => {
+            if (version != data['latest-version']) {
+                alert('يوجد تحديث جديد لتحميل التحديث قم بتشغيل \nupdater.exe')
+            }
+        })
 }
