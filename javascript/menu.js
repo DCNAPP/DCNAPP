@@ -30,6 +30,16 @@ docReady(() => {
         })
     })
 
+    document.getElementById("elm-body-settings-filler-mark").addEventListener("click", () => {
+        display.hide("#settings-inside")
+        display.show("#settings-inside-filler-mark")
+
+        document.getElementById("expand").addEventListener("click", () => {
+            display.show("#elm-body-settings")
+            display.hide("#settings-inside-filler-mark")
+        })
+    })
+
     // open [settings][info]
     document.getElementById("elm-body-info").addEventListener("click", () => {
         document.getElementById('version').innerHTML = `version: ${version}`
@@ -46,13 +56,19 @@ docReady(() => {
 
     document.getElementById("elm-body-settings-theme-in-dark").addEventListener("click", () => {
         localStorage.setItem('theme', 'dark')
-        display.hide("#menu-body")
         location.reload()
     })
     
     document.getElementById("elm-body-settings-theme-in-light").addEventListener("click", () => {
         localStorage.setItem('theme', 'light')
-        display.hide("#menu-body")
         location.reload()
+    })
+
+    document.getElementById("elm-body-settings-theme-in-filler-tag").addEventListener("click", () => {
+        localStorage.setItem("filler-mark", "filler-tag")
+    })
+
+    document.getElementById("elm-body-settings-theme-in-border-color").addEventListener("click", () => {
+        localStorage.setItem("filler-mark", "border-color")
     })
 })
