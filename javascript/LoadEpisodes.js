@@ -24,7 +24,12 @@ if (localStorage.getItem("filter") == "true") {
             for (var i = 0; i < count; i++) {
                 var item = data[i];
                 if (item.isfiller === true) {
-                    EpisodeElement = `<div class="dropdown-list_item"><button class="ep filler-ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
+                    if (localStorage.getItem("filler-mark") == "filler-tag") {
+                        EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
+                    }
+                    else {
+                        EpisodeElement = `<div class="dropdown-list_item"><button class="ep filler-ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
+                    }
                 } else {
                     EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
                 }
