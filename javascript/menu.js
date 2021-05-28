@@ -66,9 +66,11 @@ docReady(() => {
 
     document.getElementById("elm-body-settings-theme-in-filler-tag").addEventListener("click", () => {
         localStorage.setItem("filler-mark", "filler-tag")
+        location.reload()
     })
 
     document.getElementById("elm-body-settings-theme-in-border-color").addEventListener("click", () => {
         localStorage.setItem("filler-mark", "border-color")
+        location.reload()
     })
 })
