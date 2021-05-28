@@ -59,7 +59,7 @@ const UpdateTitle = (title) => {
 const CheckForUpdates = () => {
     GET_JSON(version_config)
         .then(data => {
-            if (version != data['latest-version']) {
+            if (`v${version}` != data['latest-version']) {
                 alert('يوجد تحديث جديد لتحميل التحديث قم بتشغيل \nupdater.exe')
             }
         })
