@@ -175,6 +175,15 @@ br {
   fill: #376cdf;
 }
 
+.filler-tag {
+    position: absolute;
+    border: solid 2px rgb(32, 83, 194);
+    border-radius: 13px;
+    padding: 3px 10px;
+    transform: translate(-100px, -20%);
+    z-index: 10;
+}
+
 #ep-title {
   margin-left: 50%;
   font-family: "Almarai", sans-serif;
