@@ -14,5 +14,4 @@ if (localStorage.getItem("theme") == 'light') {
     r.style.setProperty('--ep-title', '#181818');
     var element = document.getElementById("frame");
     r.style.setProperty('--box-color', '#111010');
-    element.classList.add("box");
 }
