@@ -25,7 +25,7 @@ if (localStorage.getItem("filter") == "true") {
                 var item = data[i];
                 if (item.isfiller === true) {
                     if (localStorage.getItem("filler-mark") == "filler-tag") {
-                        EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
+                        EpisodeElement = `<div class="dropdown-list_item"><button class="ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')"><span class="filler-tag">فلر</span>${item.title}</button></div>`
                     }
                     else {
                         EpisodeElement = `<div class="dropdown-list_item"><button class="ep filler-ep" onclick="LoadEpisodes(\'${item.url}\', \'${item.title}\')">${item.title}</button></div>`
