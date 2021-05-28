@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="javascript/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="css/menu.css">
     <script src="javascript/display.js"></script>
     <script src="javascript/index.js"></script>
     <script src="javascript/report.js"></script>
@@ -20,64 +20,76 @@
 
 <body>
 
-  <div id="nav-main">
+    <div id="nav-main">
         <img id="expand" src="asset/expand_more.svg">
-  </div>
-
-  <div id="menu-body" style="display: none;">
-
-    <!-- settings -->
-
-    <div class="elm-body" id="elm-body-settings">
-        <img class="icon" src="asset/settings.svg"><span class="icon-span">Settings</span>
-        <img class="chevron_right-icon" src="asset/chevron_right.svg">
     </div>
 
+    <div id="menu-body" style="display: none;">
 
-    <div id="settings-inside" style="display: none;">
-        <div class="elm-body" id="elm-body-settings-theme">
-            <img class="icon" src="asset/theme.svg"><span class="icon-span">Theme</span>
+        <!-- settings -->
+
+        <div class="elm-body" id="elm-body-settings">
+            <img class="icon" src="asset/settings.svg"><span class="icon-span">Settings</span>
             <img class="chevron_right-icon" src="asset/chevron_right.svg">
         </div>
-    </div>
 
-    <div id="settings-inside-theme" style="display: none;">
-        <div class="elm-body" id="elm-body-settings-theme-in-light">
-            <img class="icon" src="asset/sun.svg"><span class="icon-span">Light</span>
-            <!-- <img class="chevron_right-icon" src="asset/chevron_right.svg"> -->
+
+        <div id="settings-inside" style="display: none;">
+            <div class="elm-body" id="elm-body-settings-theme">
+                <img class="icon" src="asset/theme.svg"><span class="icon-span">Theme</span>
+                <img class="chevron_right-icon" src="asset/chevron_right.svg">
+            </div>
+            <div title="filler episodes mark" class="elm-body" id="elm-body-settings-filler-mark">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z"/></svg>
+                <span class="icon-span">filler mark</span>
+                <img class="chevron_right-icon" src="asset/chevron_right.svg">
+            </div>
         </div>
-        <br>
-        <div class="elm-body" id="elm-body-settings-theme-in-dark">
-            <img class="icon" src="asset/moon.svg"><span class="icon-span">Dark</span>
-            <!-- <img class="chevron_right-icon" src="asset/chevron_right.svg"> -->
-        </div>
-    </div>
-    <br>
 
-    <!-- info -->
-
-    <div class="elm-body" id="elm-body-info">
-        <img class="icon" src="asset/info.svg"><span class="icon-span">Info</span>
-        <img class="chevron_right-icon" src="asset/chevron_right.svg">
-    </div>
-
-    <div id="info-inside" style="display: none;">
-        <div id="info-text">
-            <p>Creator: snepai-10</p>
+        <div id="settings-inside-theme" style="display: none;">
+            <div class="elm-body" id="elm-body-settings-theme-in-light">
+                <img class="icon" src="asset/sun.svg"><span class="icon-span">Light</span>
+            </div>
             <br>
-            <p id="version"></p>
+            <div class="elm-body" id="elm-body-settings-theme-in-dark">
+                <img class="icon" src="asset/moon.svg"><span class="icon-span">Dark</span>
+            </div>
+        </div>
+
+        <div id="settings-inside-filler-mark" style="display: none;">
+            <div class="elm-body" id="elm-body-settings-theme-in-filler-tag">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-7-2h2V7h-4v2h2z"/></svg>
+                <span class="icon-span">filler tag</span>
+            </div>
             <br>
-            <center>
+            <div class="elm-body" id="elm-body-settings-theme-in-border-color">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-4-4h-4v-2h2c1.1 0 2-.89 2-2V9c0-1.11-.9-2-2-2H9v2h4v2h-2c-1.1 0-2 .89-2 2v4h6v-2z"/></svg>
+                <span class="icon-span">border color</span>
+            </div>
+        </div>
+
+        <!-- info -->
+
+        <div class="elm-body" id="elm-body-info">
+            <img class="icon" src="asset/info.svg"><span class="icon-span">Info</span>
+            <img class="chevron_right-icon" src="asset/chevron_right.svg">
+        </div>
+
+        <div id="info-inside" style="display: none;">
+            <div id="info-text">
                 <br>
+                <p>Creator: snepai-10</p>
                 <br>
-                <button id="updater-dl">
-                    <a id="updater-link" href="">Download The Updater</a>
-                </button>
-            </center>
+                <p id="version"></p>
+                <br>
+                <center>
+                    <br>
+                    <br>
+                    <button title="download the updater" id="updater-dl"><a id="updater-link" href="">updater</a></button>
+                </center>
+            </div>
         </div>
     </div>
-
-  </div>
 
   <br>
   <br>
