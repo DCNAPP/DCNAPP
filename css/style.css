@@ -118,6 +118,10 @@ br {
     background-color: rgb(55, 108, 223);
 }
 
+.active-ep {
+    background-color: rgb(55, 108, 223);
+}
+
 .filler-ep {
     border: solid 2px rgb(55, 108, 223);
 }
