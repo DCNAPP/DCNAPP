@@ -33,7 +33,7 @@
 
 ## windows
 
-- اذهب الي [latest version](https://github.com/DCNAPP/DCNAPP/releases/tag/v1.6.1)
+- اذهب الي [latest version](https://github.com/DCNAPP/DCNAPP/releases/tag/v1.6.2)
 
 - قم بتحميل updater.exe, DCNAPP.exe
 
